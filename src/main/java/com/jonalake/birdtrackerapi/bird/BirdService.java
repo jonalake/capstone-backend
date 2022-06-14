@@ -30,6 +30,7 @@ public class BirdService {
       updatedBird.setName(bird.getName());
       updatedBird.setQuantity(bird.getQuantity());
       updatedBird.setLocation(bird.getLocation());
+      updatedBird.setDate(bird.getDate());
 
       birdRepository.save(updatedBird);
       return Optional.of(updatedBird);

@@ -5,12 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
 
-// import com.fasterxml.jackson.annotation.JsonIgnore;
-// import com.jonalake.birdtrackerapi.location.Location;
-
 import javax.persistence.Id;
-// import javax.persistence.JoinColumn;
-// import javax.persistence.ManyToOne;
 
 import javax.persistence.Column;
 
@@ -21,7 +16,7 @@ import lombok.Data;
 @Table(name = "bird")
 public class Bird {
   @Id
-  @GeneratedValue(strategy = GenerationType.TABLE)
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
 
   @Column(name = "name")
@@ -33,8 +28,6 @@ public class Bird {
   @Column(name = "location")
   private String location;
 
-  // @ManyToOne
-  // @JoinColumn(name = "location_id")
-  // @JsonIgnore
-  // private Location location;
+  @Column(name = "date")
+  private String date;
 }
